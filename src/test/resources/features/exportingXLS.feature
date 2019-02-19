@@ -19,13 +19,13 @@ Feature: Exporting XLS report and verification of data
       | Texas          |
 
 
-#  Scenario: open the excel file and update data
-#
-#    Then user verifies the summation of the energy consumed by all states is equal to 97144.7
-#    Then user records the most energy consuming state in transportation
-#    Then user records the least energy consuming state in residential
-#    Then user records the most energy consuming state in commercial
-#    Then user records the least energy consuming state in industrial
+  Scenario: open the excel file and update data
+
+    Then user verifies the summation of the energy consumed by all states is equal to "97144.7"
+    Then user records the most energy consuming state in transportation
+    Then user records the least energy consuming state in residential
+    Then user records the most energy consuming state in commercial
+    Then user records the least energy consuming state in industrial
 
 
 
