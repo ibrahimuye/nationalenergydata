@@ -19,18 +19,14 @@ Feature: Exporting XLS report and verification of data
       | Texas          |
 
 
-  Scenario: open the excel file and update data
-
-    Then user verifies the summation of the energy consumed by all states is equal to 97144.7
-    Then user records the most energy consuming state in transportation
+#  Scenario: open the excel file and update data
+#
+#    Then user verifies the summation of the energy consumed by all states is equal to 97144.7
+#    Then user records the most energy consuming state in transportation
 #    Then user records the least energy consuming state in residential
 #    Then user records the most energy consuming state in commercial
 #    Then user records the least energy consuming state in industrial
-#    And user verifies the summation of the cells B6 to B56 are written correctly at the cell B57 as 97144.7
-#    Then  user verifies that total industrial consumtion is greater than total residential consumtion
-#    Then user updates the the values as below
-#      | Colorado | 1955.4                |
-#      | Texas    | 11555.3               |
+
 
 
 

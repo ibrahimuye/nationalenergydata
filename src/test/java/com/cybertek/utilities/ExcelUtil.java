@@ -1,12 +1,16 @@
 package com.cybertek.utilities;
+
+
+import org.apache.poi.ss.usermodel.*;
+import org.junit.Assert;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-// this class is not used  in this project
-import org.apache.poi.ss.usermodel.*;
+
 /*
  * This is a utility for reading from writing to excel files.
  * it works with xls and xlsx files.
@@ -25,6 +29,8 @@ public class ExcelUtil {
             // Access the required test data sheet
             workBook = WorkbookFactory.create(ExcelFile);
             workSheet = workBook.getSheet(sheetName);
+            // check if sheet is null or not. null means  sheetname was wrong
+            Assert.assertNotNull("Sheet: \""+sheetName+"\" does not exist\n",workSheet);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -121,6 +127,9 @@ public class ExcelUtil {
     }
 
     public int rowCount() {
-        return workSheet.getLastRowNum();
+        return workSheet.getLastRowNum()+1;
     }
+
 }
+
+
